@@ -288,13 +288,15 @@
                     throw new Error('Failed to submit data: ' + submitResponse.statusText);
                 }
             } catch (error) {
-                errorAlert.textContent = 'Oops...! some problem!';
-                errorAlert.removeAttribute('hidden');
-                setTimeout(() => {
-                    errorAlert.classList.add('fade-out');
-                    setTimeout(() => errorAlert.setAttribute('hidden', 'hidden'), 2000);
-                }, 3000);
-            }
+				errorAlert.textContent = 'A submission was all ready made. Please wait for a response from our team!';
+				errorAlert.style.backgroundColor = 'red';  // Set background color to red
+				errorAlert.removeAttribute('hidden');
+				setTimeout(() => {
+					errorAlert.classList.add('fade-out');
+					setTimeout(() => errorAlert.setAttribute('hidden', 'hidden'), 2000);
+				}, 3000);
+			}
+
         });
 
         async function getIpAddress() {
