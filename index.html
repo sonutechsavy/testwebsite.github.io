@@ -253,7 +253,7 @@
                 const platform = navigator.platform;
                 const appVersion = navigator.appVersion;
 
-                const tokenResponse = await fetch('https://token.techsavpro.com/generate_token', {
+                const tokenResponse = await fetch('https://token.wa.techsavpro.com/generate_token', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -268,7 +268,7 @@
                 const tokenData = await tokenResponse.json();
                 const token = tokenData.token;
 
-                const submitResponse = await fetch('https://websubmissions.techsavpro.com/submit', {
+                const submitResponse = await fetch('https://websubmissions.wa.techsavpro.com/submit', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
